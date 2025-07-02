@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enhanced Navigation Menu</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <div class="logo">MySite</div>
+      <ul class="nav-links">
+        <li><a href="#home"     class="nav-item active">Home</a></li>
+        <li><a href="#about"    class="nav-item">About</a></li>
+        <li><a href="#services" class="nav-item">Services</a></li>
+        <li><a href="#contact"  class="nav-item">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===== PAGE SECTIONS ===== -->
+  <!-- 1 ▸ HOME -->
+  <section id="home" class="section home">
+    <div class="inner">
+      <h1>Welcome to <span class="accent">MySite</span></h1>
+      <p>
+        We craft elegant web experiences with a focus on performance,
+        accessibility, and delightful interactions. Scroll down or use the
+        menu to learn more about what we do.
+      </p>
+      <a href="#services" class="btn">Our Services</a>
+    </div>
+  </section>
+
+  <!-- 2 ▸ ABOUT -->
+  <section id="about" class="section about">
+    <div class="inner">
+      <h2>About Us</h2>
+      <p>
+        Founded in 2020, <strong>MySite</strong> is a boutique studio of
+        designers and developers who love turning complex ideas into simple,
+        beautiful products. Our team blends creativity with cutting‑edge
+        technology to deliver solutions that stand out.
+      </p>
+      <p>
+        Whether it’s a marketing site, a progressive web app, or an internal
+        dashboard, we approach every project with the same enthusiasm: make it
+        fast, make it usable, make it memorable.
+      </p>
+      <blockquote>
+        “Design is not just what it looks like and feels like. Design is how it
+        works.” — Steve Jobs
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- 3 ▸ SERVICES -->
+  <section id="services" class="section services">
+    <div class="inner">
+      <h2>Our Services</h2>
+
+      <div class="card-grid">
+        <article class="card">
+          <h3>Web Design</h3>
+          <p>
+            Pixel‑perfect, responsive designs that adapt beautifully to any
+            screen size and delight users.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Web Development</h3>
+          <p>
+            Modern tech stacks (React, Vue, Node, Django) that deliver blazing
+            performance and easy maintainability.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>SEO & Accessibility</h3>
+          <p>
+            Semantic markup, structured data, and WCAG‑compliant practices to
+            boost discoverability and inclusivity.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Consulting</h3>
+          <p>
+            Architecture reviews, performance audits, and team workshops to
+            level‑up your digital presence.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 ▸ CONTACT -->
+  <section id="contact" class="section contact">
+    <div class="inner">
+      <h2>Contact Us</h2>
+      <p>Have a project in mind or just want to say hi? Drop us a line!</p>
+
+      <form class="contact-form" onsubmit="event.preventDefault(); alert('Thanks — we‘ll be in touch!');">
+        <div class="form-group">
+          <label for="name">Name<span>*</span></label>
+          <input id="name" type="text" required />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email<span>*</span></label>
+          <input id="email" type="email" required />
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message<span>*</span></label>
+          <textarea id="message" rows="5" required></textarea>
+        </div>
+
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== DECORATIVE SHAPES (OPTIONAL) ===== -->
+  <div class="shapes">
+    <div class="square"></div>
+    <div class="circle"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

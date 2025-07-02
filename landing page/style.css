@@ -1,0 +1,102 @@
+/* ================ RESET & BASE ================ */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Segoe UI', sans-serif; color: #333; line-height: 1.6; }
+
+/* Container helper */
+.container { max-width: 1200px; margin: auto; display: flex; justify-content: space-between; align-items: center; }
+
+/* Accent color */
+:root { --accent: #ffcc00; }
+
+/* ================ NAVBAR ================ */
+.navbar {
+  position: fixed; top: 0; width: 100%; z-index: 1000;
+  padding: 15px 40px;
+  background: linear-gradient(90deg, #1e3c72, #2a5298);
+  transition: all .3s ease;
+}
+.navbar.scrolled { background: #1e3c72; box-shadow: 0 4px 15px rgba(0,0,0,.3); }
+
+.logo { font-size: 24px; font-weight: 700; color: #fff; }
+
+.nav-links { list-style: none; display: flex; gap: 40px; }
+.nav-links a {
+  position: relative; text-decoration: none; color: #fff; font-weight: 500;
+  padding: 6px 8px; transition: color .3s, transform .2s;
+}
+.nav-links a:hover,
+.nav-links a.active { color: var(--accent); transform: scale(1.1); }
+.nav-links a.active::after {
+  content: ''; position: absolute; left: 0; bottom: -4px; width: 100%; height: 2px;
+  background: var(--accent); border-radius: 2px;
+}
+
+/* Mobile menu toggle (basic) */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column; position: absolute; right: 0; top: 60px; width: 100%;
+    background: #1e3c72; display: none;
+  }
+  .nav-links.active { display: flex; }
+}
+
+/* ================ SECTIONS ================ */
+.section {
+  min-height: 100vh; padding: 120px 20px 60px;
+  display: flex; align-items: center; justify-content: center; text-align: center;
+}
+.section .inner { max-width: 800px; }
+
+/* Specific styles */
+.home { background: #f5f8ff; }
+.about { background: #ffffff; }
+.services { background: #f5f5f5; }
+.contact { background: #ffffff; }
+
+/* Titles & accent */
+h1, h2 { margin-bottom: 20px; }
+.accent { color: var(--accent); }
+
+/* Buttons */
+.btn {
+  display: inline-block; margin-top: 25px; padding: 12px 28px;
+  background: var(--accent); color: #1e3c72; font-weight: 600; text-decoration: none;
+  border-radius: 30px; transition: transform .2s, box-shadow .2s;
+}
+.btn:hover { transform: translateY(-3px); box-shadow: 0 6px 15px rgba(0,0,0,.15); }
+
+/* Quote */
+blockquote { margin: 30px 0; font-style: italic; color: #555; border-left: 4px solid var(--accent); padding-left: 12px; }
+
+/* ================ SERVICES GRID ================ */
+.card-grid { display: grid; gap: 30px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); margin-top: 40px; }
+.card {
+  padding: 25px; background: #fff; border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,.08);
+  transition: transform .2s, box-shadow .2s;
+}
+.card:hover { transform: translateY(-6px); box-shadow: 0 6px 18px rgba(0,0,0,.15); }
+.card h3 { margin-bottom: 10px; color: #1e3c72; }
+
+/* ================ CONTACT FORM ================ */
+.contact-form { margin-top: 30px; display: grid; gap: 20px; }
+.form-group { display: flex; flex-direction: column; text-align: left; }
+.form-group label { margin-bottom: 6px; font-weight: 500; }
+.form-group label span { color: var(--accent); }
+.form-group input,
+.form-group textarea {
+  padding: 10px 12px; border: 1px solid #ccc; border-radius: 6px; font-size: 15px;
+}
+.form-group input:focus,
+.form-group textarea:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 2px rgba(255,204,0,.3); }
+
+/* ================ DECORATIVE SHAPES ================ */
+.shapes {
+  display: flex; justify-content: center; gap: 40px; margin: 50px 0;
+}
+.square, .circle {
+  width: 120px; height: 120px; box-shadow: 0 5px 15px rgba(0,0,0,.2);
+}
+.square  { background: linear-gradient(135deg, #3a7bd5, #00d2ff); border-radius: 8px; }
+.circle  { background: radial-gradient(circle, #3a7bd5, #00d2ff); border-radius: 50%; }
